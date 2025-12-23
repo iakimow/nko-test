@@ -1,10 +1,10 @@
 @use '../media' as *;
 
 .hero {
-	background: url('/images/hero-background.webp') center / cover no-repeat;
+	background: url('images/hero-background.webp') center / cover no-repeat;
 
 	@include mobile {
-		background: url('/images/hero-background-mobile.webp') center / cover ;
+		background: url('images/hero-background-mobile.webp') center / cover ;
 	}
 
 	&__content {

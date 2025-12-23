@@ -3,7 +3,7 @@
 
 .mission {
 	padding-block: 140px;
-	background: url('/images/misson/background.webp') center / cover no-repeat;
+	background: url('images/misson/background.webp') center / cover no-repeat;
 	@include fluid-text(40, 15);
 
 	@include mobile {

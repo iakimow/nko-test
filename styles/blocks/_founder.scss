@@ -1,7 +1,7 @@
 @use '../media' as *;
 @use '../mixins' as *;
 .founder {
-	background: url('/images/background.webp') center / cover no-repeat;
+	background: url('images/background.webp') center / cover no-repeat;
 	padding-block: 94px;
 
 	@include desktop {
@@ -9,7 +9,7 @@
 	}
 
 	@include tablet {
-		background: url('/images/misson/background.webp') center / cover no-repeat;
+		background: url('images/misson/background.webp') center / cover no-repeat;
 		padding-block: 40px;
 	}
 

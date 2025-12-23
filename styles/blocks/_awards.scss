@@ -18,7 +18,7 @@
 	}
 
 
-    background: url('/images/background.webp') center / cover no-repeat;
+    background: url('images/background.webp') center / cover no-repeat;
     &__slide {
     	transition: var(--transition-duration);
         &-wrapper {
