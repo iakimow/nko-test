@@ -1,0 +1,108 @@
+@use '../media' as *;
+@use '../mixins' as *;
+.about {
+	background: url('/images/about/background.webp') center / cover no-repeat;
+	background-attachment: fixed;
+	padding-block: 80px;
+
+	@include tablet {
+		background-image: none;
+		background-color: var(--color-dark);
+		padding-block: unset;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+
+		@include mobile {
+			row-gap: 20px;
+		}
+	}
+
+	&__item {
+		background: url('/images/about/card-background.webp') center / cover no-repeat;
+
+		border-radius: var(--border-radius);
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		padding: 30px;
+
+
+
+	}
+
+	&__item:nth-of-type(1) {
+		max-width: 400px;
+		margin-left: 70px;
+		@include tablet {
+			max-width: unset;
+			margin-inline: 20px;
+		}
+	}
+
+	&__item:nth-of-type(2) {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: 40px;
+		@include tablet {
+			max-width: unset;
+			margin-inline: 20px;
+		}
+
+		@include mobile {
+			position: relative;
+			&::after {
+				z-index: 100;
+				content: '';
+				position: absolute;
+				width: 95px;
+				height: 102px;
+				background: url('/images/misson/flag.png') center / cover no-repeat;
+				top: -60px;
+				left: 15px;
+				transform: scaleX(-1);
+			}
+		}
+	}
+
+	&__item:nth-of-type(3) {
+		max-width: 500px;
+		margin-left: 100px;
+
+		@include tablet {
+			max-width: unset;
+			margin-inline: 20px;
+
+
+		}
+
+		@include mobile {
+			position: relative;
+			&::after {
+				z-index: 100;
+				content: '';
+				position: absolute;
+				width: 95px;
+				height: 102px;
+				background: url('/images/misson/flag.png') center / cover no-repeat;
+				top: -60px;
+				right: 15px;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 7px;
+		@include tablet {
+			margin-bottom: 14px;
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+	&__text {
+		@include tablet {
+			text-align: center;
+		}
+	}
+}

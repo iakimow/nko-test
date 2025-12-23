@@ -1,0 +1,91 @@
+@use '../mixins' as *;
+@use '../_media.scss' as *;
+
+.htdonate {
+
+	background: url('/images/background.webp') center / cover no-repeat;
+
+	&__container {
+		padding-top:100px;
+		padding-bottom: 123px;
+
+		@include tablet {
+			padding-top: unset;
+			padding-bottom: 24px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 75px;
+
+		@include tablet {
+			padding-block: 11px;
+			margin-bottom: 11px;
+			background-color: var(--color-dark);
+			text-align: center;
+			width: 100vw;
+			margin-left: 50%;
+			transform: translateX(-50%)
+		}
+
+		&-title {
+		}
+
+		&-subtitle{
+			@include fluid-text(40, 15);
+
+
+		}
+	}
+
+	&__cards-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr ;
+		gap: 15px;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__card {
+		padding: 35px 60px 210px 45px;
+		background-color: var(--color-glass);
+		border-radius: var(--border-radius);
+		counter-increment: card-number;
+		max-width: 380px;
+
+		position: relative;
+		::after {
+			content: counter(card-number);
+			position: absolute;
+			bottom: -35px;
+			right: 30px;
+			font-family: 'Galada', sans-serif;
+			@include fluid-text(200, 100);
+			filter: blur(4px);
+			@include tablet {
+				bottom: 50%;
+				transform: translateY(66%);
+				left: -98%;
+				font-size: 90px;
+			}
+		}
+		@include tablet {
+			padding: 25px;
+			max-width: unset;
+			// width: 100%;
+			margin-left: 80px;
+			margin-right: 50px;
+			text-align: center
+		}
+
+		&-desc {
+			@include fluid-text(40, 15);
+
+			
+		}
+	}
+
+}

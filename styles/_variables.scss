@@ -1,0 +1,28 @@
+:root {
+	--color-dark: #171B24;
+	--color-light: #FFFFFF;
+	--color-green: #1D3931;
+	--color-glass: rgba(82, 111, 88, 0.49);
+    --gradient-button: linear-gradient(90.00deg, rgba(1.577532410621643, 125.18695831298828, 68.53263854980469, 1),rgba(3.3670146465301514, 102.86104583740234, 84.77122497558594, 1) 100%);
+	--gradient-button-hover: linear-gradient(90.00deg, rgba(3.3670146465301514, 102.86104583740234, 84.77122497558594, 1),   rgba(1.577532410621643, 125.18695831298828, 68.53263854980469, 1) 100%);
+
+	--border: 2px solid var(--color-light);
+	--border-radius: 14px;
+	--border-radius-large: 56px;
+
+	--blur: blur(9.4);
+
+	--font-family-base: 'Futura', sans-serif;
+	--font-family-title: 'Galderglynn', sans-serif;
+
+	--container-width: 1227px;
+	--container-padding-x: 20px;
+
+	--section-padding-y-normal: 95px;
+    --section-padding-y-small: 70px;
+    --section-padding-y-large: 140px;
+
+	--button-height: 87px;
+
+	--transition-duration: all 1.5s ease;
+}

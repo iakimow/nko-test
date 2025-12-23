@@ -1,0 +1,23 @@
+@use 'normalize';
+@use 'fonts';
+@use 'mixins';
+@use 'media';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/splide';
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/header';
+@use 'blocks/hero.scss';
+@use 'blocks/htdonate.scss';
+@use 'blocks/misson.scss';
+@use 'blocks/about.scss';
+@use 'blocks/founder.scss';
+@use 'blocks/policy.scss';
+@use 'blocks/awards.scss';
+@use 'blocks/donate.scss';
+@use 'blocks/delivery.scss';
+@use 'blocks/contact-us.scss';
+

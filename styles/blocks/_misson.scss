@@ -1,0 +1,54 @@
+@use '../media' as *;
+@use '../mixins' as *;
+
+.mission {
+	padding-block: 140px;
+	background: url('/images/misson/background.webp') center / cover no-repeat;
+	@include fluid-text(40, 15);
+
+	@include mobile {
+		padding-block: 54px;
+		background-size: contain;
+		background-color: var(--color-dark);
+		text-align: center;
+	}
+
+
+	&__text-top, &__text-bottom{
+		margin-top: 60px;
+
+		@include mobile {
+			margin-top: 20px;
+		}
+	}
+
+	&__text-top {
+		max-width: 750px;
+	}
+
+	&__text-bottom {
+		max-width: 520px;
+		@include mobile {
+			max-width: unset;
+		}
+	}
+
+	position: relative;
+	&__flag {
+		position: absolute;
+		bottom: 0;
+		left: 60%;
+
+		@include desktop {
+			width: 30%;
+			left: 68%;
+		}
+
+		@include mobile {
+			display: none;
+		}
+
+
+	}
+
+}

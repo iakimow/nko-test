@@ -1,0 +1,80 @@
+@use '../media' as *;
+@use '../mixins' as *;
+
+.contact-us {
+	background: url('/images/background.webp') center / cover no-repeat;
+	padding-block: 90px;
+
+	@include desktop {
+		padding-block: 60px;
+	}
+
+	@include tablet {
+		padding-block: 30px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 75px;
+		@include desktop {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+
+		}
+	}
+	&__item {
+		width: 260px;
+		font-size: 25px;
+		margin-left: 30px;
+
+		
+
+		@include tablet {
+			font-size: 15px;
+		}
+
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 7px;
+			left: -30px;
+			width: 19px;
+			height: 22px;
+			background: url('/images/geo.svg') center / cover no-repeat;
+
+			@include tablet {
+				top: 5px;
+				left: -15px;
+				width: 10px;
+				height: 12px;
+			}
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 7px;
+			left: -30px;
+			width: 20px;
+			height: 20px;
+			background: url('/images/tel.svg') center / cover no-repeat;
+
+			@include tablet {
+				bottom: 5px;
+				left: -15px;
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+}

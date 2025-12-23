@@ -1,0 +1,54 @@
+@use '../media' as *;
+
+.splide {
+
+	&__slide {
+		&-wrapper {
+			max-height: 385px;
+			width: 100%;
+			height: 100%;
+
+			@include desktop {
+				max-height: 340px;
+			}
+
+			@include tablet {
+				max-height: 200px;
+			}
+
+			@include mobile {
+				max-height: 130px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.splide__pagination {
+	display: none;
+}
+
+.splide__arrow {
+	svg {
+		display: none;
+	}
+	background: transparent;
+
+	&:hover {
+		scale: 1.05;
+	}
+	box-shadow: 0 0 0 0;
+	border-radius: 2px;
+}
+
+.splide__arrow--next {
+	background: url('/images/arrow-next.svg') center / cover no-repeat;
+}
+
+.splide__arrow--prev {
+	background: url('/images/arrow-prev.svg') center / cover no-repeat;
+}

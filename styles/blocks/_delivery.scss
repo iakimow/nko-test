@@ -1,0 +1,96 @@
+@use "../mixins" as *;
+@use "../media" as *;
+
+.delivery {
+	padding-block: 90px;
+	background-color: var(--color-dark);
+
+	@include tablet {
+		padding-block: 30px;
+	}
+
+	&__title {
+		margin-bottom: 48px;
+
+		@include tablet {
+			margin-bottom: 28px;
+			text-align: center;
+			background: url('/images/background.webp') center / cover no-repeat;
+			width: 100vw;
+			padding-block: 22px;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__pickup{
+		&-area {
+			display: flex;
+			margin-bottom: 60px;
+			justify-content: space-between;
+			gap: 20px;
+
+			@include tablet {
+				margin-bottom: 35px;
+			}
+
+			@include mobile {
+				flex-direction: column;
+				margin-bottom: 20px;
+			}
+		}
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			column-gap: 50px;
+
+			@include mobile {
+				background-color: var(--color-glass);
+				border-radius: 23px;
+				padding-right: 40px;
+			}
+
+		}
+		&-img {
+			border-radius: var(--border-radius-large);
+			box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+			@include mobile {
+				border-radius: 23px;
+			}
+			&-wrapper {
+				@include tablet {
+					max-width: 100px;
+				}
+			}
+
+		}
+		&-adress {
+			text-transform: uppercase;
+		}
+	}
+
+	&__content {
+		max-width: 855px;
+		margin-bottom: 55px;
+		@include fluid-text(40, 15);
+
+		@include tablet {
+			margin-bottom: 35px;
+		}
+
+		@include mobile {
+			margin-bottom: 20px;
+			text-align: justify;
+			hyphens: auto;
+			-webkit-hyphens: auto;
+			word-break: normal;
+		}
+	}
+	&__button {
+		@include mobile {
+			font-size: 15px;
+			width: 100%;
+		}
+	}
+}

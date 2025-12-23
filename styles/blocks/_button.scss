@@ -1,0 +1,55 @@
+@use '../mixins';
+@use '../media' as *;
+
+.button {
+	@include mixins.reset-button;
+	@include mixins.flex-center(true);
+
+	height: var(--button-height);
+	border-radius: var(--border-radius);
+	background-image:  var(--gradient-button);
+	background-size: 200% 100%;
+	background-position: right center;
+
+	padding-inline: 113px;
+	font-size: 40px;
+	color: var(--color-light);
+
+
+	&--transparent {
+		background: transparent;
+		border: var(--border);
+		padding-inline: 28px;
+
+		@include hover {
+			scale: 1.02;
+		}
+	}
+
+	transition: var(--transition-duration);
+	@include hover {
+		// background: var(--gradient-button-hover);
+		background-position: left center;
+		// transform: scale(1.03);
+	}
+
+
+
+	@include desktop {
+		height: 80px;
+		padding-inline: 95px;
+		font-size: 36px;
+	}
+
+	@include tablet {
+		height: 65px;
+		padding-inline: 95px;
+		font-size: 25px;
+	}
+
+	@include mobile {
+		height: 55px;
+		padding-inline: 80px;
+		font-size: 25px;
+	}
+}

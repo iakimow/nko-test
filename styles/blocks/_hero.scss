@@ -1,0 +1,94 @@
+@use '../media' as *;
+
+.hero {
+	background: url('/images/hero-background.webp') center / cover no-repeat;
+
+	@include mobile {
+		background: url('/images/hero-background-mobile.webp') center / cover ;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		align-items: center;
+		padding-top: 144px;
+		max-width: 70%;
+		margin-left: auto;
+
+		@include desktop {
+			padding-top: 100px;
+		}
+
+		@include mobile {
+			max-width: unset;
+			margin-left: unset;
+			padding-top: 350px;
+			padding-inline: 10px;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 58px;
+
+		@include desktop {
+			margin-bottom: 30px;
+			width: 250px;
+		}
+
+		@include tablet {
+			margin-bottom: 20px;
+			width: 200px;
+		}
+
+		@include mobile {
+			
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 93px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__button {
+		margin-bottom: 77px;
+
+		@include tablet {
+			margin-bottom: 35px;
+		}
+
+		@include mobile {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__desc {
+		text-align: center;
+		margin-bottom: 35px;
+		padding-right: 20px;
+		max-width: 850px;
+		font-size: 15px;
+
+		@include desktop {
+			max-width: 600px;
+		}
+
+		@include tablet {
+			max-width: 500px;
+		}
+
+		@include mobile {
+			max-width: 400px;
+			margin-bottom: 20px;
+			padding-right: unset;
+			max-width: unset;
+		}
+	}
+
+
+}
